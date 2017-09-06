@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <title>Home</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Vue</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="conditions.html">Conditions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="filter.html">Filters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="component.html">Component</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <div id="app">
+        <h2>Change title</h2>
+        <button v-on:click="changeTitle">Change Title</button>
+        <p>{{ title }}</p>
+        <h2>Dynamic & custom CSS</h2>
+        <input type="text" v-on:input="cssClass = $event.target.value">
+        <p>Classes available are (red, blue, custom)</p>
+        <p :class="cssClass">Class: {{ cssClass }}</p>
+
+        <h2>Increament Counter & Clicks</h2>
+        <button @click='increment'>Increment</button>
+        <p>Counter: {{ counter }}</p>
+        <p>Clicks: {{ clicks }}</p>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
+    <script src="../index.js"></script>
+</body>
+
+</html>

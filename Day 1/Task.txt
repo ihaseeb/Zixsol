@@ -1,0 +1,9 @@
+create github account - done
+setup new github repo - done
+install:
+1.sourcetree - done
+2.VS code - done
+3.Node & npm - done
+go through Vue documentation
+install vue and vue-cli through npm
+run sample applications

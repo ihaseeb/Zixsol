@@ -1,0 +1,32 @@
+body {
+    background: grey;
+}
+
+#app,
+#app2,
+#app3,
+#app4 {
+    padding: 20px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.custom {
+    background-color: red;
+    font-family: ariel;
+    color: white;
+    font-size: 18px;
+}
+
+.user {
+    border: 1px solid;
+    padding: 10px;
+    max-width: 200px;
+    min-width: 150px;
+}
