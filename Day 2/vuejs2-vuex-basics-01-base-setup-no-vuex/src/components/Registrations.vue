@@ -14,6 +14,7 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex';
     export default {
        
         methods: {
@@ -27,12 +28,10 @@
             }
         },
         computed: {
-            registrations() {
-                return this.$store.state.registrations;
-            },
-            total() {
-                return this.$store.state.registrations.length;
-            }
+             ...mapGetters({
+                registrations: 'registrations',
+                total: 'totalRegistrations'
+             })
         }
     }
 </script>
