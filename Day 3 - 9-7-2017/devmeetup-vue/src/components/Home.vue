@@ -10,11 +10,13 @@
    </v-layout>
    <v-layout row wrap class="mt-2">
      <v-flex xs12>
-      <v-carousel>
+      <v-carousel style="cursor: pointer">
        <v-carousel-item 
        v-for="meetup in meetups" 
        :src="meetup.imageUrl" 
-       :key="meetup.id">
+       :key="meetup.id"
+       @click="OnLoadMeetup(meetup.id)"
+       >
        <div class="title">
          {{meetup.title}}
        </div>
@@ -38,6 +40,11 @@
           { imageUrl: 'https://i0.wp.com/www.dilkashpakistan.com/wp-content/uploads/2016/09/Monal-Restruen-islamabad.jpg', id: 'dswewr1212', title: 'Meetup in Islamabad Monal' },
           { imageUrl: 'https://c1.staticflickr.com/9/8650/15893075208_b07489f39d_b.jpg', id: 'dswsdfsf122132', title: 'Meetup in Islamabad Centaurus' }
         ]
+      }
+    },
+    methods: {
+      OnLoadMeetup(id) {
+        this.$router.push('/meetups/' +id)
       }
     }
   }

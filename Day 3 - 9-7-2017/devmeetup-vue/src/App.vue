@@ -8,9 +8,9 @@
         router
         :to="item.link"
         >
-          <v-list-tile-action>
+          <v-list-tile-actions>
             <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
+          </v-list-tile-actions>
           <v-list-tile-content>{{ item.title }}</v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -30,7 +30,6 @@
       <v-btn flat 
       v-for="item in menuItems" 
       :key="item.title"
-      router
       :to="item.link"
       >
         <v-icon left dark>{{ item.icon }}</v-icon>
@@ -52,10 +51,10 @@
         sideNav: false,
         menuItems: [
           {icon: 'supervisor_account', title: 'View Meetups', link: 'meetups'},
-          {icon: 'room', title: 'Organize Meetups', link: 'meetup/new'},
+          {icon: 'room', title: 'Organize Meetups', link: '/meetup/new'},
           {icon: 'person', title: 'Profile', link: '/profile'},
-          {icon: 'face', title: 'Sign up', link: 'signup'},
-          {icon: 'lock_open', title: 'Sign in', link: 'signin'}
+          {icon: 'face', title: 'Sign up', link: '/signup'},
+          {icon: 'lock_open', title: 'Sign in', link: '/signin'}
         ]
       }
     }
