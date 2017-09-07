@@ -8,9 +8,9 @@
         router
         :to="item.link"
         >
-          <v-list-tile-actions>
+          <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-actions>
+          </v-list-tile-action>
           <v-list-tile-content>{{ item.title }}</v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -50,7 +50,7 @@
       return {
         sideNav: false,
         menuItems: [
-          {icon: 'supervisor_account', title: 'View Meetups', link: 'meetups'},
+          {icon: 'supervisor_account', title: 'View Meetups', link: '/meetups'},
           {icon: 'room', title: 'Organize Meetups', link: '/meetup/new'},
           {icon: 'person', title: 'Profile', link: '/profile'},
           {icon: 'face', title: 'Sign up', link: '/signup'},

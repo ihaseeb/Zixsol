@@ -34,12 +34,9 @@
 
 <script>
   export default {
-    data() {
-      return {
-        meetups: [
-          { imageUrl: 'https://i0.wp.com/www.dilkashpakistan.com/wp-content/uploads/2016/09/Monal-Restruen-islamabad.jpg', id: 'dswewr1212', title: 'Meetup in Islamabad Monal' },
-          { imageUrl: 'https://c1.staticflickr.com/9/8650/15893075208_b07489f39d_b.jpg', id: 'dswsdfsf122132', title: 'Meetup in Islamabad Centaurus' }
-        ]
+    computed: {
+      meetups() {
+        return this.$store.getters.featuredMeetups
       }
     },
     methods: {
