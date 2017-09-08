@@ -6,7 +6,7 @@ import CreateMeetup from '@/components/Meetup/CreateMeetup'
 import Profile from '@/components/User/Profile'
 import Signup from '@/components/User/Signup'
 import Signin from '@/components/User/Signin'
-import Meetup from '@/components/User/Meetup'
+import Meetup from '@/components/Meetup/Meetup'
 
 Vue.use(Router)
 
