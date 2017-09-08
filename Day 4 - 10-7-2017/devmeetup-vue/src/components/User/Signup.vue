@@ -83,7 +83,6 @@ export default {
       return this.$store.getters.error
     },
     loading () {
-      console.log('loading is now', this.$store.getters.loading)
       return this.$store.getters.loading
     }
   },
