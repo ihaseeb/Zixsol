@@ -5,15 +5,15 @@
         <v-card>
           <v-card-text>
             <v-container>
-              <form>
+              <form @submit.prevent= "onSignup" >
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
-                    name='email'
-                    label='Mail'
-                    id='email'
+                    name="email"
+                    label="Mail"
+                    id="email"
                     v-model="email"
-                    type='email'
+                    type="email"
                     required
                     ></v-text-field>
                   </v-flex>
@@ -66,12 +66,21 @@ export default {
   computed: {
     comparePasswords () {
       return this.password !== this.confirmPassword ? 'Passwords Do not match' : ''
+    },
+    user () {
+      return this.$store.getters.user
+    }
+  },
+  watch: {
+    user (value) {
+      if (value !== null && value !== undefined) {
+        this.$router.push('/')
+      }
     }
   },
   methods: {
     onSignup () {
-      //vuex
-      console.log({email: this.emial, password: this.password, confirmPassword: this.confirmPassword})
+      this.$store.dispatch('signUserUp', {email: this.email, password: this.password})
     }
   }
 }
