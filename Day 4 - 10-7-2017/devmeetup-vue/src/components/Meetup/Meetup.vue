@@ -64,8 +64,8 @@
                 return this.$store.getters.user.id === this.meetup.creatorId
             },
             loading() {
-        return this.$store.getters.loading
-      }
+                return this.$store.getters.loading
+            }
         }
     }
 </script>
